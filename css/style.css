@@ -4909,7 +4909,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 
 .alert-danger {
   color: #721c24;
-  background-color: #f8d7da;
+  background-color: rgb(239, 91, 174);
   border-color: #f5c6cb;
 }
 
@@ -9775,6 +9775,17 @@ h6,
 .page-header{
   background-color: #062c33;
 }
+p,
+label {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+}
+
+
+
 
 
 
