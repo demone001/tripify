@@ -78,10 +78,6 @@
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link">Autor</a>
                         <a href="service.html" class="nav-item nav-link">Servisi</a>
-                        <a href="#Destinacije" class="nav-item nav-link">Destinacije</a>
-                        <a href="" class="nav-item nav-link">Recenzije</a>
-                        <a href="" class="nav-item nav-link">Naši vodiči</a>
-                        <a href="" class="nav-item nav-link">Naš blog</a>
                         <div class="nav-item dropdown">
                             </div>
                         </div>
@@ -125,23 +121,34 @@
                         <div id="success"></div>
                         <form name="sentMessage" id="contactForm" novalidate="novalidate">
                             <div class="form-row">
-                                <div class="control-group col-sm-6">
-                                    <input type="text" class="form-control p-4" id="name" placeholder="Ime"
-                                        required="required" data-validation-required-message="Molimo vas upisite vase ime" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="control-group col-sm-6">
-                                    <input type="email" class="form-control p-4" id="email" placeholder="Email"
-                                        required="required" data-validation-required-message="Molimo vas upisite vas Email" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
+                                <div id="formFullName" class="form-group col-12 col-sm-6 pe-4">
+                                    <label for="full-name" class="font-weight-bold lab">Ime</label>
+                                    <input type="text" class="form-control" id="full-name">
+                                    <div class="alert alert-danger d-block" id="fullNameError">Samo slova su dozvoljena.</div>
+                                    </div>
+                                <div id="formEmail" class="form-group">
+                                    <label for="email" class="font-weight-bold lab">Mail</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"/>
+                                      <div class="alert alert-danger d-block" id="emailError">Email mora sadrzati @ izmedju vaseg imena i mejl putanje.</div>
+                                  </div>
                             </div>
-                            <div class="control-group">
-                                <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Vasa poruka"
-                                    required="required"
-                                    data-validation-required-message="Molimo vas upisite vasu poruku"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
+                            <div id="formMessage" class="form-group">
+                                <label for="message" class="font-weight-bold lab">Message</label>
+                                <textarea class="form-control" id="message"></textarea>
+                              </div>
+                              <fieldset>
+                                <legend>Izaberite kako cete provesti svoje putovanje:</legend>
+                            
+                                <div>
+                                  <input type="checkbox" id="scales" name="scales" checked>
+                                  <label for="scales">Letovanje</label>
+                                </div>
+                            
+                                <div>
+                                  <input type="checkbox" id="horns" name="horns">
+                                  <label for="horns">Zimovanje</label>
+                                </div>
+                            </fieldset>
                             <div class="text-center">
                                 <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">Posalji</button>
                             </div>
